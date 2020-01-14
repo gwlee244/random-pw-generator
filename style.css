@@ -1,16 +1,16 @@
 body {
     margin: 0 auto;
-    background-image : url("concrete_seamless.png");
+    background-color: black;
     background-repeat: repeat;
 }
 
-.navbar-title {
+/*.navbar-title {
     text-align: center;
-}
+} */
 
 .container-main {
     width: 960px;
-    background-color: white;
+    background-color: linen;
     margin: 0 auto;
     height: 500px;
     margin-top: 35px;
@@ -20,25 +20,81 @@ body {
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
-h2 {
+h1 {
     padding: 15px;
+    text-align: center;
+    font-size: 35px;
+    font-style: bolder;
 }
-#display {
-    width: 650px;
+
+.container-content {
+    background-color: white;
+    width: 800px;
+    height: 385px;
+    border-width: 2px;
+    margin-left: 80px;
+    margin-top: 20px;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    
+}
+
+#h2header {
+    margin-left: 25px;
+    padding: 20px;
+    font-size: 25px;
+    font-style: bold:
+}
+
+#hr-one{
+    display: block;
+    width: 700px;
+    margin-left: 45px;
+    border-width: 2px;
+    border-color: lightgray;
+    opacity: 50%;
+    margin-bottom: 9px;
+}
+
+#hr-two{
+    display: block;
+    width: 700px;
+    margin-left: 45px;
+    border-width: 2px;
+    border-color: lightgray;
+    opacity: 50%;
+    margin-top: 9px;
+}
+
+#yourPw {
+    margin-left: 45px;
+    width: 700px;
     height: 200px;
-    border-style: dashed
+    border-style: dashed;
+    border-color: lightgrey;
+    border-radius: 8px;
 }
 
-
-button1 {
-    border-radius: 15px;
-    color: white;
+#button1 {
+    width: 200px;
+    height: 50px;
+    margin-left: 45px;
+    border-radius: 20px;
     background-color: red;
+    color: white;
+    margin-left: 100px;
+    margin-top: -5px;
+    font-size: 20px;
+
 }
 
 #button2 {
-    border-radius: 15px;
-    color: white;
+    width: 200px;
+    height: 50px;
+    margin-right: 45px;
+    border-radius: 20px;
     background-color: gray;
-    border-width: 2px;
+    color: white;
+    margin-left: 100px;
+    margin-top: -5px;
+    font-size: 20px;
 }
