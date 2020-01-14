@@ -2,13 +2,16 @@
 var lower = "abcdefghijklmnopqrstuvwxyz";
 var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var num = "0123456789";
-var special = "~`!@#$%^&*()-_+";
+var special = "~`!@#$%^&*()-_+<>?/.:;,|";
 
-var charNum = document.getElementById("charNum");
-var submit = document.getElementById("submit");
+//var submit = document.getElementById("submit");
 var yourPw = document.getElementById("yourPw");
 
 var characters = "";
+
+//prompt for #pw characters
+
+var charNum = prompt("How long is your password between 8-128 characters?");
 
 function answerSpecial() {
     var specialYes = confirm("Do you want to use Special characters?");
@@ -44,7 +47,8 @@ answerNum();
 
 
 function clickSubmit() {
-    yourPw.value = password(charNum.value, characters);
+    yourPw.value = password(charNum, characters);
+
 }
 
 function password(length, characters) {

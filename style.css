@@ -1,0 +1,44 @@
+body {
+    margin: 0 auto;
+    background-image : url("concrete_seamless.png");
+    background-repeat: repeat;
+}
+
+.navbar-title {
+    text-align: center;
+}
+
+.container-main {
+    width: 960px;
+    background-color: white;
+    margin: 0 auto;
+    height: 500px;
+    margin-top: 35px;
+    border: solid;
+    border-color: #dddddd;
+    border-width: 1px;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+h2 {
+    padding: 15px;
+}
+#display {
+    width: 650px;
+    height: 200px;
+    border-style: dashed
+}
+
+
+button1 {
+    border-radius: 15px;
+    color: white;
+    background-color: red;
+}
+
+#button2 {
+    border-radius: 15px;
+    color: white;
+    background-color: gray;
+    border-width: 2px;
+}
