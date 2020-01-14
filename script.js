@@ -52,15 +52,6 @@ function answerNum() {
     }
 }
 answerNum();
-/*
-// function to check that at least one character type is selected
-function checkChar() {
-    var checked = specialYes || lowerYes || upperYes || numYes
-    if (checked == false) {
-        alert("Please select at least one character type");
-    }
-}
-answerSpecial();*/
 
 // click Generate Password button will create new pw
 function clickSubmit() {
