@@ -8,6 +8,8 @@ var yourPw = document.getElementById("yourPw");
 
 var characters = "";
 
+var atleastone = 4;
+
 //prompt user for #pw characters
 alert("Password length must be between 8 and 128 characters");
 var charNum = prompt("Select a password length between 8 and 128 characters");
@@ -24,6 +26,9 @@ function answerSpecial() {
     if (specialYes == true) {
         characters = characters + special;
     }
+    else {
+        atleastone = atleastone -1;
+    }
 }
 answerSpecial();
 
@@ -32,6 +37,9 @@ function answerLower() {
     var lowerYes = confirm("Do you want to use Lower case letters?");
     if (lowerYes == true) {
         characters = characters + lower;
+    }
+    else {
+        atleastone = atleastone -1;
     }
 }
 answerLower();
@@ -42,6 +50,9 @@ function answerUpper() {
     if (upperYes == true) {
         characters = characters + upper;
     }
+    else {
+        atleastone = atleastone -1;
+    }
 }
 answerUpper();
 
@@ -51,14 +62,29 @@ function answerNum() {
     if (numYes == true) {
         characters = characters + num;
     }
+    else {
+        atleastone = atleastone -1;
+    }
 }
 answerNum();
+
+function check() {
+    if (atleastone==0) {
+        alert("You need to pick at least one character type");
+        answerSpecial();
+        answerLower();
+        answerUpper();
+        answerNum();
+    }
+}
+check();
 
 // click Generate Password button will create new pw
 function clickSubmit() {
     yourPw.value = password(charNum, characters);
 
 }
+
 
 // function to randomly generate pw
 function password(length, characters) {
