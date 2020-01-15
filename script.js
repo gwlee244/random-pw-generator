@@ -9,13 +9,14 @@ var yourPw = document.getElementById("yourPw");
 var characters = "";
 
 //prompt user for #pw characters
+alert("Password length must be between 8 and 128 characters");
 var charNum = prompt("Select a password length between 8 and 128 characters");
-
-//check to see that pw length is between 8 and 128
-if (charNum < 8 || charNum > 128) {
-        alert("Length must be between 8 and 128 characters");
-        var charNum = prompt("Select a password length between 8 and 128 characters");
+function pwLength() {
+    if (charNum < 8 || charNum > 128) {
+        charNum = prompt("Select a password length between 8 and 128 characters");
+    }
 }
+pwLength();
 
 // ask user if they want Special characters in their pw
 function answerSpecial() {
