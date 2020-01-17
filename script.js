@@ -10,17 +10,24 @@ var characters = "";
 
 var atleastone = 4;
 
+var charNum = "";
+
 //prompt user for #pw characters
-alert("Password length must be between 8 and 128 characters");
-var charNum = prompt("Select a password length between 8 and 128 characters");
+function begin() {
+    alert("Password length must be between 8 and 128 characters");
+    charNum = prompt("Select a password length between 8 and 128 characters");
+}
+begin();
+
+//check for pw length.. while loops until length between 8 and 128 characters is chosen
 function pwLength() {
-    if (charNum < 8 || charNum > 128) {
+    while(charNum<8 || charNum>128) {
         charNum = prompt("Select a password length between 8 and 128 characters");
     }
 }
 pwLength();
 
-// ask user if they want Special characters in their pw
+//ask user if they want Special characters in their pw
 function answerSpecial() {
     var specialYes = confirm("Do you want to use Special characters?");
     if (specialYes == true) {
@@ -32,7 +39,7 @@ function answerSpecial() {
 }
 answerSpecial();
 
-// ask user if they want Lower case letters in their pw
+//ask user if they want Lower case letters in their pw
 function answerLower() {
     var lowerYes = confirm("Do you want to use Lower case letters?");
     if (lowerYes == true) {
@@ -44,7 +51,7 @@ function answerLower() {
 }
 answerLower();
 
-// ask user if they want Upper case letters in their pw
+//ask user if they want Upper case letters in their pw
 function answerUpper() {
     var upperYes = confirm("Do you want to use Upper case letters?");
     if (upperYes == true) {
@@ -56,7 +63,7 @@ function answerUpper() {
 }
 answerUpper();
 
-// ask user if they want Numbers in their pw
+//ask user if they want Numbers in their pw
 function answerNum() {
     var numYes = confirm("Do you want to use Numbers?");
     if (numYes == true) {
@@ -69,7 +76,7 @@ function answerNum() {
 answerNum();
 
 function check() {
-    if (atleastone==0) {
+    if (atleastone == 0) {
         alert("You need to pick at least one character type");
         answerSpecial();
         answerLower();
@@ -79,14 +86,14 @@ function check() {
 }
 check();
 
-// click Generate Password button will create new pw
+//click Generate Password button will create new pw
 function clickSubmit() {
     yourPw.value = password(charNum, characters);
 
 }
 
 
-// function to randomly generate pw
+//function to randomly generate pw
 function password(length, characters) {
     var pwd = "";
     for(var i=0; i<length; i++) {
@@ -95,7 +102,7 @@ function password(length, characters) {
     return pwd;
 }
 
-// function to copy pw to clipboard ---> had google and find example
+//function to copy pw to clipboard ---> had google and find example
 function clickCopy() {
     var copyText = document.getElementById("yourPw");
     copyText.select();
