@@ -34,3 +34,4 @@ Your application's GitHub repository should contain a README.md file explaining 
 
 https://gwlee244.github.io/random-pw-generator/
 
+![picture](passwordgen_screenshot.png)
