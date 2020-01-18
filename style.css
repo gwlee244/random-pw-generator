@@ -73,6 +73,7 @@ h1 {
     border-style: dashed;
     border-color: lightgrey;
     border-radius: 8px;
+    text-align: center;
 }
 
 #button1 {
